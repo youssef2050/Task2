@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="layout_background">#ebf4fc</color>
+    <color name="button_background">#49788f</color>
+    <color name="text_color">#7c9cad</color>
+    <color name="textView_color">#10a6fe</color>
+    <color name="stroke_color">#f5f9fd</color>
+    <color name="hint_color">#c7d5db</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+</resources>
