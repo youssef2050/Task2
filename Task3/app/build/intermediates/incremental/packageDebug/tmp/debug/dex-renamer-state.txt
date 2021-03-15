@@ -1,4 +1,0 @@
-#Mon Mar 15 10:34:14 IST 2021
-base.0=E\:\\projects\\Android project\\Task2git\\Task3\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
