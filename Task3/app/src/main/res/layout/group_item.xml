@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/edittext_background2"
+    android:padding="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:fontFamily="@font/font_text"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="102dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageGroup"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/img_profile"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="5dp"
+            android:fontFamily="@font/font_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:text="120505"
+            app:layout_constraintBottom_toBottomOf="@+id/imageGroup"
+            app:layout_constraintStart_toEndOf="@+id/imageGroup"
+            app:layout_constraintTop_toTopOf="@+id/imageGroup"
+            app:layout_constraintVertical_bias="0.131" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/black"
+            android:text="أحباب الرحمن"
+            app:layout_constraintBottom_toBottomOf="@+id/imageGroup"
+            app:layout_constraintStart_toEndOf="@+id/imageGroup"
+            app:layout_constraintTop_toBottomOf="@+id/id"
+            app:layout_constraintVertical_bias="0.176" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/font_text"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/black"
+
+            android:maxLines="4"
+            android:singleLine="false"
+            android:text="fvndfnvkdfnvkdfnvkdnfvkndfkvndfkvnkdfnvkdfnvkdfnvkdfnfvkndfvkndfkvndfkvnkdfnvkdfnvkdfngkdekdnfknfkvd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageGroup" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

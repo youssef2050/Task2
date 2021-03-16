@@ -8,7 +8,7 @@
     tools:context=".ui.CreateGroup.CreateGroupFragment">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/circleImageView2"
+        android:id="@+id/cf_img_group"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_centerInParent="true"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/cf_name_group"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -38,11 +38,11 @@
         android:textColorHint="@color/hint_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/circleImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/cf_img_group"
         tools:ignore="RtlHardcoded" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/cf_member_group"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -59,11 +59,11 @@
         android:textColorHint="@color/hint_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/cf_name_group"
         tools:ignore="RtlHardcoded" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/cf_descrption_group"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -76,7 +76,7 @@
         android:background="@drawable/edittext_background2"
         android:fontFamily="@font/font_text"
         android:gravity="top|right"
-        android:hint="@string/descrbtion_Group"
+        android:hint="@string/description_Group"
         android:inputType="textMultiLine"
         android:layoutDirection="rtl"
         android:lines="8"
@@ -86,7 +86,7 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2"
+        app:layout_constraintTop_toBottomOf="@+id/cf_member_group"
         tools:ignore="RtlHardcoded" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -94,33 +94,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
+        app:layout_constraintGuide_percent="0.02" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.79" />
+        app:layout_constraintGuide_percent="0.84" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/cf_add_img_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:src="@drawable/ic_baseline_add_24"
         app:backgroundTint="@color/stroke_color"
         app:fabSize="mini"
-        app:layout_constraintBottom_toBottomOf="@+id/circleImageView2"
-        app:layout_constraintEnd_toEndOf="@+id/circleImageView2"
+        app:layout_constraintBottom_toBottomOf="@+id/cf_img_group"
+        app:layout_constraintEnd_toEndOf="@+id/cf_img_group"
         app:layout_constraintHorizontal_bias="0.927"
-        app:layout_constraintStart_toStartOf="@+id/circleImageView2"
-        app:layout_constraintTop_toTopOf="@+id/circleImageView2"
+        app:layout_constraintStart_toStartOf="@+id/cf_img_group"
+        app:layout_constraintTop_toTopOf="@+id/cf_img_group"
         app:layout_constraintVertical_bias="0.927"
         tools:ignore="ContentDescription,KeyboardInaccessibleWidget" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/cf_add_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -132,6 +132,6 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintTop_toBottomOf="@+id/cf_descrption_group" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
