@@ -1,6 +1,18 @@
 <resources>
-    <string name="app_name">Task3</string>
+    <string name="app_name">ولو آية</string>
+    <string name="usernaem">اسم المستخدم</string>
+    <string name="pages">450 صفحة</string>
+    <string name="Conclusion">1 ختمة</string>
+    <string name="search_group">ابحث عن مجموعة!</string>
+    <string name="enter_number_group">ادخل رقم المجموعة</string>
+    <string name="text">قم بالبحث عن المجموعة عن طريق الرقم الخاص بالمجموعة اطلب الرقم من ادمن المجموعة</string>
+    <string name="create_new_group">إنشاء مجموعة جديدة</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_dashboard">List Group</string>
+    <string name="title_notifications">Setting</string>
+    <string name="name_group">اسم المجموعة</string>
+    <string name="number_member">عدد الاعضاء</string>
+    <string name="descrbtion_Group">وصف المجموعة</string>
+    <string name="add_group">إضافة المجموعة</string>
+
 </resources>

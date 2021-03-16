@@ -6,23 +6,65 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7568595c-bed6-431e-b6ee-0d6fbcf75440" name="Default Changelist" comment="" />
+    <list default="true" id="7568595c-bed6-431e-b6ee-0d6fbcf75440" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/CreateGroup/CreateGroupFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/CreateGroup/CreateGroupViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/button_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edittext_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/edittext_background2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_add_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_group_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_list_alt_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_search_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_baseline_settings_24.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/img_profile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/boldsmill.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/font_text.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/create_group_fragment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/style.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/home/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/home/HomeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[a740d65d]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1pmpyaZ7RmCagPA6yu5E7U7Vgyz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="abbreviatePackageNames" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -35,8 +77,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projects\Android project\Task2git\Task2\Task3\app\src\main\res\drawable" />
+      <recent name="E:\projects\Android project\Task2git\Task2\Task3\app\src\main\res" />
+      <recent name="E:\projects\Android project\Task2git\Task2\Task3\app\src\main\res\values" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -46,7 +96,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="Task3.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -128,5 +178,43 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="task3" />
     <option name="LAST_COMMIT_MESSAGE" value="task3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="410" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615867386931">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="410" y="115" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.738@0.0.1360.738" timestamp="1615867386931" />
+    <state x="260" y="123" key="AndroidCreateResourceFileDialog" timestamp="1615870153872">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="260" y="123" key="AndroidCreateResourceFileDialog/0.0.1360.738@0.0.1360.738" timestamp="1615870153872" />
+    <state x="525" y="176" key="AndroidCreateXmlResourceDialog" timestamp="1615871714107">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="525" y="176" key="AndroidCreateXmlResourceDialog/0.0.1360.738@0.0.1360.738" timestamp="1615871714107" />
+    <state x="307" y="0" key="CommitChangelistDialog2" timestamp="1615798658921">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="307" y="0" key="CommitChangelistDialog2/0.0.1360.738@0.0.1360.738" timestamp="1615798658921" />
+    <state width="1317" height="182" key="GridCell.Tab.0.bottom" timestamp="1615868733310">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state width="1317" height="182" key="GridCell.Tab.0.bottom/0.0.1360.738@0.0.1360.738" timestamp="1615868733310" />
+    <state width="1317" height="182" key="GridCell.Tab.0.center" timestamp="1615868733310">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state width="1317" height="182" key="GridCell.Tab.0.center/0.0.1360.738@0.0.1360.738" timestamp="1615868733310" />
+    <state width="1317" height="182" key="GridCell.Tab.0.left" timestamp="1615868733309">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state width="1317" height="182" key="GridCell.Tab.0.left/0.0.1360.738@0.0.1360.738" timestamp="1615868733309" />
+    <state width="1317" height="182" key="GridCell.Tab.0.right" timestamp="1615868733310">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state width="1317" height="182" key="GridCell.Tab.0.right/0.0.1360.738@0.0.1360.738" timestamp="1615868733310" />
+    <state x="489" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615798663706">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="489" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.738@0.0.1360.738" timestamp="1615798663706" />
   </component>
 </project>

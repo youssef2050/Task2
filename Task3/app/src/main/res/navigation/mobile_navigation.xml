@@ -9,7 +9,11 @@
         android:id="@+id/navigation_home"
         android:name="com.menu.task3.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
@@ -22,4 +26,13 @@
         android:name="com.menu.task3.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.menu.task3.ui.CreateGroup.CreateGroupFragment"
+        android:label="create_group_fragment"
+        tools:layout="@layout/create_group_fragment" >
+        <action
+            android:id="@+id/action_createGroupFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
 </navigation>
