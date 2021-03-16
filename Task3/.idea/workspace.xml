@@ -6,28 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7568595c-bed6-431e-b6ee-0d6fbcf75440" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/dashboard/Adapter/AdapterGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/dashboard/Adapter/Group.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/img1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/img2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/img3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/img4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/img5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/group_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/CreateGroup/CreateGroupFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/CreateGroup/CreateGroupFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/dashboard/DashboardFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/dashboard/DashboardFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/dashboard/DashboardViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/dashboard/DashboardViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/home/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/menu/task3/ui/home/HomeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/create_group_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/create_group_fragment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7568595c-bed6-431e-b6ee-0d6fbcf75440" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,13 +154,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615871840665</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add Group to Array list">
+      <created>1615899785334</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615899785334</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="task3" />
     <MESSAGE value="Create Group fragment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Group fragment" />
+    <MESSAGE value="add Group to Array list" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Group to Array list" />
   </component>
   <component name="WindowStateProjectService">
     <state x="325" y="56" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1615874931067">
@@ -208,10 +195,10 @@
       <screen x="0" y="0" width="1360" height="738" />
     </state>
     <state x="525" y="176" key="AndroidCreateXmlResourceDialog/0.0.1360.738@0.0.1360.738" timestamp="1615871714107" />
-    <state x="307" y="0" key="CommitChangelistDialog2" timestamp="1615871839157">
+    <state x="307" y="0" key="CommitChangelistDialog2" timestamp="1615899784215">
       <screen x="0" y="0" width="1360" height="738" />
     </state>
-    <state x="307" y="0" key="CommitChangelistDialog2/0.0.1360.738@0.0.1360.738" timestamp="1615871839157" />
+    <state x="307" y="0" key="CommitChangelistDialog2/0.0.1360.738@0.0.1360.738" timestamp="1615899784215" />
     <state width="1317" height="182" key="GridCell.Tab.0.bottom" timestamp="1615879003629">
       <screen x="0" y="0" width="1360" height="738" />
     </state>
@@ -232,9 +219,9 @@
       <screen x="0" y="0" width="1360" height="738" />
     </state>
     <state x="496" y="146" key="chooseDestDirectoryDialog/0.0.1360.738@0.0.1360.738" timestamp="1615876335058" />
-    <state x="489" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615871843947">
+    <state x="489" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1615899790143">
       <screen x="0" y="0" width="1360" height="738" />
     </state>
-    <state x="489" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.738@0.0.1360.738" timestamp="1615871843947" />
+    <state x="489" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.738@0.0.1360.738" timestamp="1615899790143" />
   </component>
 </project>
