@@ -12,7 +12,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[a740d65d]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -199,6 +199,10 @@
       <screen x="0" y="0" width="1360" height="738" />
     </state>
     <state x="307" y="0" key="CommitChangelistDialog2/0.0.1360.738@0.0.1360.738" timestamp="1615899784215" />
+    <state x="460" y="123" key="FileChooserDialogImpl" timestamp="1616540768410">
+      <screen x="0" y="0" width="1360" height="738" />
+    </state>
+    <state x="460" y="123" key="FileChooserDialogImpl/0.0.1360.738@0.0.1360.738" timestamp="1616540768410" />
     <state width="1317" height="182" key="GridCell.Tab.0.bottom" timestamp="1615879003629">
       <screen x="0" y="0" width="1360" height="738" />
     </state>
