@@ -46,6 +46,7 @@ public class AppsService extends Service {
                         stalkList.add(services.get(i).baseActivity.getPackageName());
                     }
                 }
+                //
 
                 List<ActivityManager.RunningAppProcessInfo> procInfos = activityManager.getRunningAppProcesses();
                 for (int i = 0; i < procInfos.size(); i++) {
