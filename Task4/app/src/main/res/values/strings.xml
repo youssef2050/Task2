@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Task4</string>
+    <string name="preference_file_key">Keys</string>
+    <string name="number_start_app">numberStartApp</string>
+    <string name="number_on_back_press">numberOnBackPress</string>
+    <string name="number_run_other_apps">numberRunOtherApps</string>
 </resources>
