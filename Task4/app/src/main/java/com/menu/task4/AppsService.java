@@ -1,173 +1,121 @@
 package com.menu.task4;
 
 
+import android.annotation.TargetApi;
 import android.app.ActivityManager;
-import android.app.Service;
+import android.app.job.JobParameters;
+import android.app.job.JobService;
+import android.app.usage.UsageStats;
+import android.app.usage.UsageStatsManager;
+import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.IBinder;
+import android.os.Build;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+import static com.menu.task4.Public.paks;
+import static com.menu.task4.Public.search;
 
 
-public class AppsService extends Service {
+@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+public class AppsService extends JobService {
     public static final String TAG = "AppsService";
     private Context context = null;
     SharedPreferences sharedPreference;
     SharedPreferences.Editor editor;
-    List<String> stalkList;
+
 
     @Override
     public void onCreate() {
         super.onCreate();
-        stalkList = new ArrayList<>();
         context = getApplicationContext();
         sharedPreference = getSharedPreferences(context.getString(R.string.preference_file_key), MODE_PRIVATE); /* @prmay*/
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
-    public int onStartCommand(Intent intent, int flags, int startId) {
-        Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new TimerTask() {
-            public void run() {
-                final ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-                final List<ActivityManager.RunningTaskInfo> services = activityManager.getRunningTasks(Integer.MAX_VALUE);
-                for (int i = 0; i < services.size(); i++) {
-                    if (!stalkList.contains(services.get(i).baseActivity.getPackageName())) {
-                        stalkList.add(services.get(i).baseActivity.getPackageName());
-                    }
-                }
-                //
+    public boolean onStartJob(JobParameters params) {
 
-                List<ActivityManager.RunningAppProcessInfo> procInfos = activityManager.getRunningAppProcesses();
-                for (int i = 0; i < procInfos.size(); i++) {
-
-                    ArrayList<String> runningPkgs = new ArrayList<String>(Arrays.asList(procInfos.get(i).pkgList));
-
-                    Collection diff = subtractSets(runningPkgs, stalkList);
-
-                    if (diff != null) {
-                        stalkList.removeAll(diff);
-                    }
-                }
-
-
-            }
-        }, 20000, 6000);  // every 6 seconds
-
-
-        return START_STICKY;
-    }
-
-    @Nullable
-    @Override
-    public IBinder onBind(Intent intent) {
-        return null;
-    }
-
-
-    private ActivityManager.RunningAppProcessInfo getForegroundApp() {
-        ActivityManager.RunningAppProcessInfo result = null, info = null;
-
-        final ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-
-        List<ActivityManager.RunningAppProcessInfo> l = activityManager.getRunningAppProcesses();
-        Iterator<ActivityManager.RunningAppProcessInfo> i = l.iterator();
-        while (i.hasNext()) {
-            info = i.next();
-            if (info.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND
-                    && !isRunningService(info.processName)) {
-                result = info;
-                break;
-            }
+        String pak = getUsageStatsForegroundActivityName();
+        System.out.println(pak);
+        if (pak != null) {
+            if (!search(pak))
+                paks.add(pak);
+            System.out.println(paks);
         }
-        return result;
-    }
-
-    private boolean isRunningService(String processName) {
-        if (processName == null)
-            return false;
-
-        ActivityManager.RunningServiceInfo service;
-
-        final ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-
-        List<ActivityManager.RunningServiceInfo> l = activityManager.getRunningServices(9999);
-        Iterator<ActivityManager.RunningServiceInfo> i = l.iterator();
-        while (i.hasNext()) {
-            service = i.next();
-            if (service.process.equals(processName))
-                return true;
-        }
+        jobFinished(params, true);
         return false;
     }
 
-    private boolean isRunningApp(String processName) {
-        if (processName == null)
-            return false;
-
-        ActivityManager.RunningAppProcessInfo app;
-
-        final ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-
-        List<ActivityManager.RunningAppProcessInfo> l = activityManager.getRunningAppProcesses();
-        Iterator<ActivityManager.RunningAppProcessInfo> i = l.iterator();
-        while (i.hasNext()) {
-            app = i.next();
-            if (app.processName.equals(processName) && app.importance != ActivityManager.RunningAppProcessInfo.IMPORTANCE_SERVICE)
-                return true;
-        }
-        return false;
-    }
-
-
-    private boolean checkifThisIsActive(ActivityManager.RunningAppProcessInfo target) {
-        boolean result = false;
-        ActivityManager.RunningTaskInfo info;
-
-        if (target == null)
-            return false;
-
-        final ActivityManager activityManager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
-
-        List<ActivityManager.RunningTaskInfo> l = activityManager.getRunningTasks(9999);
-        Iterator<ActivityManager.RunningTaskInfo> i = l.iterator();
-
-        while (i.hasNext()) {
-            info = i.next();
-            if (info.baseActivity.getPackageName().equals(target.processName)) {
-                result = true;
-                break;
-            }
-        }
-
-        return result;
-    }
-
-
-    // what is in b that is not in a ?
-    public static Collection subtractSets(Collection a, Collection b) {
-        Collection result = new ArrayList(b);
-        result.removeAll(a);
-        return result;
-    }
-
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public boolean onStopJob(JobParameters params) {
         int numbers = sharedPreference.getInt(context.getString(R.string.number_run_other_apps), 0);
         editor = sharedPreference.edit();
-        editor.putInt(context.getString(R.string.number_run_other_apps), numbers + stalkList.size());
+        editor.putInt(context.getString(R.string.number_run_other_apps), numbers + paks.size());
         editor.apply();
         editor.commit();
+        return true;
+    }
+
+    private String ApplicationInForeground(final Context context) {
+        final ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        final List<ActivityManager.RunningTaskInfo> tasks = activityManager.getRunningTasks(1);
+        if (!tasks.isEmpty()) {
+            final ComponentName topActivity = tasks.get(0).topActivity;
+            if (!topActivity.getPackageName().equals(context.getPackageName())) {
+                return topActivity.getPackageName();
+            }
+        }
+        return null;
+    }
+    public  String ApplicationInForeground() {
+        final ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        final List<ActivityManager.RunningAppProcessInfo> runningProcesses = activityManager.getRunningAppProcesses();
+        for (final ActivityManager.RunningAppProcessInfo processInfo : runningProcesses) {
+            if (processInfo.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
+                for (final String activeProcess : processInfo.pkgList) {
+                    if (!activeProcess.equals(context.getPackageName())) {
+                        return activeProcess;
+                    }
+                }
+            }
+        }
+        return null;
+    }
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    private String getUsageStatsForegroundActivityName() {
+
+
+        UsageStatsManager mUsageStatsManager = (UsageStatsManager) getSystemService(USAGE_STATS_SERVICE);
+        long endTime = System.currentTimeMillis();
+        long beginTime = endTime - 1000 * 60;
+
+        // result
+        String topActivity = null;
+
+        // We get usage stats for the last minute
+        List<UsageStats> stats = mUsageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, beginTime, endTime);
+
+        // Sort the stats by the last time used
+        if (stats != null) {
+            SortedMap<Long, UsageStats> mySortedMap = new TreeMap<Long, UsageStats>();
+            for (UsageStats usageStats : stats) {
+                mySortedMap.put(usageStats.getLastTimeUsed(), usageStats);
+            }
+            if (mySortedMap != null && !mySortedMap.isEmpty()) {
+                topActivity = mySortedMap.get(mySortedMap.lastKey()).getPackageName();
+
+            }
+        }
+        if (topActivity != null)
+            return topActivity;
+        else
+            return Constant.ACTIVITY_NOT_FOUND;
+
     }
 }
