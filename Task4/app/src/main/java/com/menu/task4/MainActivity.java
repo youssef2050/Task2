@@ -16,7 +16,6 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import static com.menu.task4.Constant.CONTEXT;
 import static com.menu.task4.Public.paks;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        CONTEXT = getBaseContext();
         numberStartApp = findViewById(R.id.tv_number_start_app);
         numberOnBackPress = findViewById(R.id.tv_number_on_back_press);
         numberRunOtherApps = findViewById(R.id.tv_number_run_other_apps);
