@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-        stopJobServic();
+        stopJobService();
         numberRunOtherAppsInt = sharedPref.getInt(getString(R.string.number_run_other_apps), 0);
         numberRunOtherApps.setText(numberRunOtherAppsInt + "");
     }
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        stopJobServic();
+        stopJobService();
     }
 
 
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-    public void stopJobServic() {
+    public void stopJobService() {
         jobScheduler = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
         sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
         editor = sharedPref.edit();
