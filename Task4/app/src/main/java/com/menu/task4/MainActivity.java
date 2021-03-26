@@ -16,6 +16,9 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.menu.task4.Constant.CONTEXT;
+import static com.menu.task4.Public.paks;
+
 public class MainActivity extends AppCompatActivity {
     private TextView numberStartApp, numberOnBackPress, numberRunOtherApps;
     private SharedPreferences sharedPref;
@@ -24,11 +27,14 @@ public class MainActivity extends AppCompatActivity {
     private int numberRunOtherAppsInt;
     private SharedPreferences.Editor editor;
     public static final int ID_JOB = 100;
+    JobScheduler jobScheduler;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        CONTEXT = getBaseContext();
         numberStartApp = findViewById(R.id.tv_number_start_app);
         numberOnBackPress = findViewById(R.id.tv_number_on_back_press);
         numberRunOtherApps = findViewById(R.id.tv_number_run_other_apps);
@@ -51,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         numberOnBackPress.setText(numberOnBackPressInt + "");
         numberRunOtherApps.setText(numberRunOtherAppsInt + "");
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-            if(!hasPermission()){
+            if (!hasPermission()) {
                 startActivityForResult(
                         new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS),
                         Constant.MY_PERMISSIONS_REQUEST_PACKAGE_USAGE_STATS);
@@ -59,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -71,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     private boolean hasPermission() {
         AppOpsManager appOps = (AppOpsManager)
@@ -91,12 +98,11 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onStart() {
         super.onStart();
 
-        numberRunOtherAppsInt = sharedPref.getInt(getString(R.string.number_run_other_apps), 0);
-        numberRunOtherApps.setText(numberRunOtherAppsInt + "");
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
@@ -114,20 +120,25 @@ public class MainActivity extends AppCompatActivity {
                     .setMinimumLatency(200)
                     .build();
         }
-        JobScheduler jobScheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
+        jobScheduler = (JobScheduler) getSystemService(JOB_SCHEDULER_SERVICE);
         jobScheduler.schedule(jobInfo);
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onRestart() {
         super.onRestart();
-
+        stopJobServic();
+        numberRunOtherAppsInt = sharedPref.getInt(getString(R.string.number_run_other_apps), 0);
+        numberRunOtherApps.setText(numberRunOtherAppsInt + "");
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        stopJobServic();
     }
 
 
@@ -136,6 +147,19 @@ public class MainActivity extends AppCompatActivity {
                 .setTitle(title)
                 .setMessage(message)
                 .show();
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+    public void stopJobServic() {
+        jobScheduler = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
+        sharedPref = getSharedPreferences(getString(R.string.preference_file_key), Context.MODE_PRIVATE);
+        editor = sharedPref.edit();
+        numberRunOtherAppsInt = sharedPref.getInt(getString(R.string.number_run_other_apps), 0);
+        editor.putInt(getString(R.string.number_run_other_apps), numberRunOtherAppsInt + paks.size());
+        paks.clear();
+        editor.apply();
+        editor.commit();
+        jobScheduler.cancelAll();
     }
 
 }

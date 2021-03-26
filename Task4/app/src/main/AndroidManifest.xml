@@ -6,6 +6,7 @@
     <uses-permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -14,9 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Task4">
         <service
-            android:name=".AppsService"
-            android:enabled="true"
-            android:exported="true"
+            android:name="AppsService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <activity android:name=".MainActivity">
