@@ -1,6 +1,8 @@
 package com.menu.task5;
 
-public class Post {
+import java.io.Serializable;
+
+public class Post implements Serializable {
     private long id;
     private String name;
     private String body;
@@ -84,4 +86,19 @@ public class Post {
     public void setImage(int image) {
         this.image = image;
     }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", body='" + body + '\'' +
+                ", date='" + date + '\'' +
+                ", followers=" + followers +
+                ", following=" + following +
+                ", posts=" + posts +
+                ", image=" + image +
+                '}';
+    }
+
 }

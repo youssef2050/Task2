@@ -6,14 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PostAdapter extends BaseAdapter {
     private List<Post> posts;
     private Context context;
 
-    public PostAdapter(List<Post> posts, Context context) {
-        this.posts = posts;
+    public PostAdapter(Context context) {
+        this.posts = new ArrayList<>();
         this.context = context;
     }
 
@@ -32,6 +33,11 @@ public class PostAdapter extends BaseAdapter {
         return posts.get(position).getId();
     }
 
+    public void addPost(Post post) {
+        posts.add(post);
+        notifyDataSetChanged();
+    }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
@@ -42,6 +48,8 @@ public class PostAdapter extends BaseAdapter {
 
         //TODO get Post and create result in items
         Post post = getItem(position);
+
+
         return view;
     }
 }
