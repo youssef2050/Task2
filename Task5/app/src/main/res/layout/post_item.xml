@@ -44,7 +44,8 @@
                 android:id="@+id/post_follow"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="@string/follow" />
+                android:text="@string/follow"
+                android:textAllCaps="false" />
         </LinearLayout>
 
         <LinearLayout
@@ -145,15 +146,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
-                android:padding="5dp"
                 android:gravity="center"
+                android:padding="5dp"
                 android:text="Yossef S ezzeldeen"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/post_body"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -163,7 +164,7 @@
         android:background="#E91E63"
         android:gravity="center"
         android:padding="10dp"
-        android:text="@string/welcome_at_my_profile_you_can_follow_me_now"
+        android:textAllCaps="false"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -179,7 +180,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
+        app:layout_constraintTop_toBottomOf="@+id/post_body">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/post_like"
@@ -188,8 +189,9 @@
             android:layout_marginEnd="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-
             android:text="@string/like"
+
+            android:textAllCaps="false"
             app:icon="@drawable/ic_favorite"
             app:iconTint="#E90031" />
 
@@ -201,6 +203,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:text="@string/share"
+            android:textAllCaps="false"
             app:icon="@drawable/ic_share" />
 
         <com.google.android.material.button.MaterialButton
@@ -209,6 +212,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/comment"
+            android:textAllCaps="false"
             app:icon="@drawable/ic_comment" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
