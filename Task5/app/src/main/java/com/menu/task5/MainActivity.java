@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        listView = findViewById(R.id.posts);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
-        listView = findViewById(R.id.posts);
         postAdapter = new PostAdapter(this);
         listView.setAdapter(postAdapter);
         fab.setOnClickListener(view -> {
@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == ADD_REQUEST_CODE & resultCode == RESULT_OK) {
-            Post post = data.getParcelableExtra(AddPost.POST_RESULT);
+            assert data != null;
+            Post post = (Post) data.getExtras().getSerializable(AddPost.POST_RESULT);
             postAdapter.addPost(post);
         }
     }
