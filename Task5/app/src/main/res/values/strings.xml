@@ -11,4 +11,5 @@
     <string name="name">name</string>
     <string name="date">date</string>
     <string name="body">body</string>
+    <string name="save">save</string>
 </resources>

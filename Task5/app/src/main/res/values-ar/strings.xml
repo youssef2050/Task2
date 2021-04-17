@@ -11,4 +11,5 @@
     <string name="name">الاسم</string>
     <string name="date">التاريخ</string>
     <string name="body">المنشور</string>
+    <string name="save">حفظ</string>
 </resources>
