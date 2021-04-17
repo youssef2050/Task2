@@ -8,4 +8,7 @@
     <string name="share">مشاركة</string>
     <string name="comment">تعليق</string>
     <string name="follow">تابع</string>
+    <string name="name">الاسم</string>
+    <string name="date">التاريخ</string>
+    <string name="body">المنشور</string>
 </resources>

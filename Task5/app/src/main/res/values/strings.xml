@@ -8,4 +8,7 @@
     <string name="share">share</string>
     <string name="comment">comment</string>
     <string name="follow">follow</string>
+    <string name="name">name</string>
+    <string name="date">date</string>
+    <string name="body">body</string>
 </resources>
