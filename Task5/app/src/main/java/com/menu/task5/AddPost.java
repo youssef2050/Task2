@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -49,7 +50,8 @@ public class AddPost extends AppCompatActivity implements ItemListDialogFragment
                 intent.putExtras(bundle);
                 setResult(RESULT_OK, intent);
                 finish();
-            }
+            } else
+                Toast.makeText(this, "Enter input", Toast.LENGTH_SHORT).show();
         });
         addImage.setOnClickListener(v -> {
             itemListDialogFragment = ItemListDialogFragment.newInstance();
@@ -64,7 +66,8 @@ public class AddPost extends AppCompatActivity implements ItemListDialogFragment
                 body != null && !TextUtils.isEmpty(body.getText().toString()) &&
                 following != null && !TextUtils.isEmpty(following.getText().toString()) &&
                 followers != null && !TextUtils.isEmpty(followers.getText().toString()) &&
-                posts != null && !TextUtils.isEmpty(posts.getText().toString());
+                posts != null && !TextUtils.isEmpty(posts.getText().toString()) &&
+                image != 0;
     }
 
     private int getImage() {
