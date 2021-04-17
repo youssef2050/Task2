@@ -5,8 +5,6 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.Serializable;
-
 public class AddPost extends AppCompatActivity {
 
     public static final String POST_RESULT = "post";
@@ -15,9 +13,9 @@ public class AddPost extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_post);
-        Post post = null;
+        Post post = new Post(10, "ddvdv", "", "", 1021, 105, 1524, R.drawable.ic_user);
         Intent intent = new Intent();
-        intent.putExtra(POST_RESULT,  post);
+        intent.putExtra(POST_RESULT, post);
         setResult(RESULT_OK);
         finish();
     }

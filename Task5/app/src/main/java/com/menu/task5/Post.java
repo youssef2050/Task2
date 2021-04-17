@@ -1,8 +1,11 @@
 package com.menu.task5;
 
-import java.io.Serializable;
+import android.annotation.SuppressLint;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class Post implements Serializable {
+@SuppressLint("ParcelCreator")
+public class Post implements Parcelable {
     private long id;
     private String name;
     private String body;
@@ -101,4 +104,13 @@ public class Post implements Serializable {
                 '}';
     }
 
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+
+    }
 }
