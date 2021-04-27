@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مهمة 6</string>
+    <string name="red">احمر</string>
+    <string name="green">اخضر</string>
+    <string name="blue">ازرق</string>
+    <string name="all">الكل</string>
+</resources>

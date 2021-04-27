@@ -3,8 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.menu.task6.MainActivity">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:id="@+id/menu_red"
+        android:title="@string/red"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_green"
+        android:title="@string/green"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_blue"
+        android:title="@string/blue"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_all"
+        android:title="@string/all"
         app:showAsAction="never" />
 </menu>
